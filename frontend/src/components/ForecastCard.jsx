@@ -9,7 +9,6 @@ const ForecastCard = ({ city }) => {
       try {
         const data = await getForecast(city);
 
-        // Group forecast by date
         const dailyData = {};
         data.list.forEach((item) => {
           const date = new Date(item.dt * 1000).toLocaleDateString("en-US", {

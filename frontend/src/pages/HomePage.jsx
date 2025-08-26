@@ -8,17 +8,12 @@ import axios from "axios";
 const HomePage = () => {
   const [city, setCity] = useState("Hyderabad");
   const [weather, setWeather] = useState(null);
-  const [forecast, setForecast] = useState([]);
 
   const fetchWeather = async () => {
     try {
       const data = await getWeather(city);
       setWeather(data);
       console.log("Weather Data:", data);
-
-      const forecast = await getForecast(city);
-      console.log("Forecast:", forecast);
-      setForecast(forecast.list.slice(0, 7));
       setCity('')
     } catch (err) {
       console.error(err);

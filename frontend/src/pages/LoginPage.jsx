@@ -19,7 +19,6 @@ const LoginPage = () => {
     try {
       const result =await signInWithPopup(auth, provider);
       const user = result.user;
-      console.log(user)
       const token = await user.getIdToken();
       Cookies.set("authToken", token, { expires: 7 });
       Cookies.set("userID", user.uid, { expires: 7 });
