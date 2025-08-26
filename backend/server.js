@@ -1,15 +1,27 @@
-const express = require('express');
-const dotenv=require('dotenv');
-const cors=require('cors');
-const DBConnection = require('./config/db');
-const port = 5000 || process.env.PORT;
+const express = require("express");
+const dotenv = require("dotenv");
+const cors = require("cors");
 
-const app=express();
+const DBConnection = require("./config/db");
+
+const favouriteRoutes = require("./routes/favouritesRoute");
+const preferenceRoutes = require("./routes/preferencesRoute");
+const weatherRoutes = require("./routes/weatherRoute");
+
+dotenv.config();
+
+const port = process.env.PORT || 5000;
+
+const app = express();
 app.use(express.json());
-app.use(cors);
+app.use(cors());
 
-DBConnection()
+DBConnection();
 
-app.listen(port, ()=>{
-    console.log('Sucessfully server started...!!!!!!');
-})
+app.use("/api/favourites", favouriteRoutes);
+app.use("/api/preferences", preferenceRoutes);
+app.use("/api/weather", weatherRoutes);
+
+app.listen(port, () => {
+  console.log(`Sever started on port ${port}...!!!!!!`);
+});

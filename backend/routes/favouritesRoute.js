@@ -8,10 +8,10 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/", getFavourites);
+router.get("/:uid", getFavourites);
 
 router.post("/", postFavourites);
 
-router.delete("/:cityName", deleteFavourite);
+router.delete("/:uid/:cityName", deleteFavourite);
 
-module.exports(router);
+module.exports=router;

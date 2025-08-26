@@ -7,8 +7,8 @@ const express = require("express");
 
 const router = express.Router();
 
-router.get("/", getPreferences);
+router.get("/:uid", getPreferences);
 
-router.update("/", updatePreference);
+router.put("/", updatePreference);
 
 module.exports = router;

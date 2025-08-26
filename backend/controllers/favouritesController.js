@@ -11,7 +11,7 @@ const getFavourites = async (req, res) => {
     const favourites = await Favourite.find({ uid });
     res.json(favourites);
   } catch (e) {
-    res.status(500).json("Server Error", e.message);
+    res.status(500).json({ message: "Server Error", error: e.message });
   }
 };
 
@@ -20,7 +20,7 @@ const postFavourites = async (req, res) => {
     const { uid, cityName, country, lat, lon } = req.body;
 
     if (!uid || !cityName) {
-      return res.status(400).json({ message: "UID and cit name required" });
+      return res.status(400).json({ message: "UID and city name required" });
     }
 
     const favourite = await Favourite.create({
@@ -37,19 +37,18 @@ const postFavourites = async (req, res) => {
       return res.status(400).json({ message: "City already in favourites" });
     }
 
-    res.status(500).json({ message: "Server error", error: e.message });
+    res.status(500).json({ message: "Server Error", error: e.message });
   }
 };
 
 const deleteFavourite = async (req, res) => {
   try {
-    const { uid } = req.query;
-    const { cityName } = req.params;
+    const { uid,cityName } = req.params;
 
     if (!uid || !cityName) {
       return res
         .status(400)
-        .json({ message: "UID and city Name are required" });
+        .json({ message: "UID and city name are required" });
     }
 
     const result = await Favourite.findOneAndDelete({ uid, cityName });
@@ -57,7 +56,8 @@ const deleteFavourite = async (req, res) => {
     if (!result) {
       return res.status(404).json({ message: "Favourite not found" });
     }
-    res.json("Favourite removed");
+
+    res.json({ message: "Favourite removed" });
   } catch (e) {
     res.status(500).json({ message: "Server Error", error: e.message });
   }

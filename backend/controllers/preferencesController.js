@@ -2,7 +2,7 @@ const Preferences = require("../models/peferences.model");
 
 const getPreferences = async (req, res) => {
   try {
-    const { uid } = req.query;
+    const { uid } = req.params;
 
     if (!uid) {
       return res.status(400).json({ message: "UID is required" });
@@ -26,7 +26,7 @@ const updatePreference = async (req, res) => {
     if (!uid) {
       return res.status(400).json({ message: "UID is required" });
     }
-    const updated = await Preferences.updateOne(
+    const updated = await Preferences.findOneAndUpdate(
       { uid },
       { unit, lastLocation },
       { upsert: true, new: true }
