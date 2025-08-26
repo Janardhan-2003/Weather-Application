@@ -1,6 +1,4 @@
-import React from "react";
-import { auth } from "../firebase/FirebaseConfig";
-import { signOut } from "firebase/auth";
+import { FiStar, FiLogOut } from "react-icons/fi";
 import Cookies from "js-cookie";
 import { useNavigate } from "react-router-dom";
 
@@ -8,33 +6,46 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    try {
-      signOut(auth).then(() => {
-        Cookies.remove("authToken");
-        navigate("/login");
-      });
-    } catch (e) {
-      console.error("Failed to logout", e);
-    }
+    Cookies.remove("authToken");
+    navigate("/login");
   };
+
+  const handleOnclikFavs = () => {
+    navigate("/favourites");
+  };
+
+  const onClickLogo=()=>{
+    navigate('/')
+  }
+
   return (
-    <div className="bg-transparent border-b border-slate-800 text-slate-50 flex items-center justify-between px-4 py-3">
-      <div>
-        <h1 className="text-2xl font-bold font-serif">Weather</h1>
+    <nav className="sticky top-0 z-50 backdrop-blur-lg bg-[#0d0d0dc9] border-b border-gray-700">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-10">
+        <div className="flex justify-between h-16 items-center">
+          <div className="flex items-center gap-2 cursor-pointer" onClick={onClickLogo}>
+            <span className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+              WeatherX
+            </span>
+          </div>
+
+          <div className="flex items-center gap-5">
+            <button
+              className="flex items-center gap-1 text-gray-300 hover:text-yellow-400 transition cursor-pointer"
+              onClick={handleOnclikFavs}
+            >
+              <FiStar size={20} /> Favourites
+            </button>
+
+            <button
+              onClick={handleLogout}
+              className="flex items-center gap-1 px-3 py-1 rounded-xl bg-red-500/20 text-red-400 hover:bg-red-500/40 transition cursor-pointer"
+            >
+              <FiLogOut size={18} /> Logout
+            </button>
+          </div>
+        </div>
       </div>
-      <div className="flex mx-4 px-4 justify-between items-center">
-        <p className="bg-slate-700 w-10 h-10 text-center rounded-full py-1.5 mr-4 font-extrabold text-lg cursor-pointer">
-          P
-        </p>
-        <button
-          className="border border-slate-800 w-22 h-10 rounded-xl text-center cursor-pointer hover:border-slate-700"
-          type="button"
-          onClick={handleLogout}
-        >
-          LogOut
-        </button>
-      </div>
-    </div>
+    </nav>
   );
 };
 

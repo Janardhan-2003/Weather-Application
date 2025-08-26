@@ -9,6 +9,7 @@ const LoginPage = () => {
 
   useEffect(()=>{
     const token = Cookies.get('authToken');
+
     if(token){
       navigate('/')
     }
@@ -21,6 +22,7 @@ const LoginPage = () => {
       console.log(user)
       const token = await user.getIdToken();
       Cookies.set("authToken", token, { expires: 7 });
+      Cookies.set("userID", user.uid, { expires: 7 });
       navigate('/')
     } catch (e) {
       console.error(e.message);

@@ -1,3 +1,4 @@
+const axios=require('axios');
 const Favourite = require("../models/favourites.model");
 
 const getFavourites = async (req, res) => {
@@ -23,6 +24,15 @@ const postFavourites = async (req, res) => {
       return res.status(400).json({ message: "UID and city name required" });
     }
 
+    const apiKey = process.env.OPENWEATHER_API_KEY;
+    const response = await axios.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`
+    );
+
+    if (!response.data || response.data.cod !== 200) {
+      return res.status(404).json({ error: "City not found or invalid" });
+    }
+
     const favourite = await Favourite.create({
       uid,
       cityName,
@@ -43,7 +53,7 @@ const postFavourites = async (req, res) => {
 
 const deleteFavourite = async (req, res) => {
   try {
-    const { uid,cityName } = req.params;
+    const { uid, cityName } = req.params;
 
     if (!uid || !cityName) {
       return res
