@@ -12,6 +12,7 @@ const getFavourites = async (req, res) => {
     const favourites = await Favourite.find({ uid });
     res.json(favourites);
   } catch (e) {
+    console.error(e.message)
     res.status(500).json({ message: "Server Error", error: e.message });
   }
 };
@@ -43,6 +44,7 @@ const postFavourites = async (req, res) => {
 
     res.status(201).json(favourite);
   } catch (e) {
+    console.error(e.message)
     if (e.code === 11000) {
       return res.status(400).json({ message: "City already in favourites" });
     }
@@ -69,6 +71,7 @@ const deleteFavourite = async (req, res) => {
 
     res.json({ message: "Favourite removed" });
   } catch (e) {
+    console.error(e.message)
     res.status(500).json({ message: "Server Error", error: e.message });
   }
 };

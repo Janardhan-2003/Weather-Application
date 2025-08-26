@@ -14,6 +14,7 @@ const getCurrentWeather = async (req, res) => {
     const { data } = await axios.get(url);
     res.json(data);
   } catch (error) {
+    console.error(error.message)
     res.status(500).json({
       message: "Current weather fetch failed",
       error: error.response?.data || error.message,
@@ -32,6 +33,7 @@ const getForecast = async (req, res) => {
     const { data } = await axios.get(url);
     res.json(data);
   } catch (error) {
+    console.error(error.message)
     res.status(500).json({
       message: "Forecast fetch failed",
       error: error.response?.data || error.message,
