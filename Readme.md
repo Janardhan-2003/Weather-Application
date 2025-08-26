@@ -46,47 +46,6 @@ This project is designed to showcase **full-stack development skills** with clea
 
 ---
 
-## 📂 Project Structure
-
-### Backend (`/server`)
-```
-
-server/
-│── config/
-│ └── db.js # MongoDB connection
-│── controllers/
-│ ├── favouritesController.js
-│ └── preferencesController.js
-│── models/
-│ ├── Favourite.js
-│ └── Preference.js
-│── routes/
-│ ├── favouritesRoutes.js
-│ ├── preferencesRoutes.js
-│ └── weatherRoutes.js
-│── server.js # Entry point
-│── package.json
-
-```
-
-### Frontend (`/client`)
-```
-
-frontend/
-│── src/
-│ ├── api/ # API helper functions
-│ ├── components/ # Navbar, WeatherCard, ForecastCard, etc.
-│ ├── pages/ # Home, Favourites, Login
-│ ├── firebase/ # FirebaseConfig.js
-│ ├── App.jsx
-│ ├── main.jsx
-│── index.html
-│── package.json
-
-````
-
----
-
 ## ⚙️ Setup & Installation
 
 ### 1. Clone Repository
