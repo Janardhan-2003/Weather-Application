@@ -27,5 +27,5 @@ app.use("/api/preferences", preferenceRoutes);
 app.use("/api/weather", weatherRoutes);
 
 app.listen(port, () => {
-  console.log(`Server started on port ${port}...!!!!!!`);
+  console.log(`Server stated on port ${port}...!!!!!!`);
 });
