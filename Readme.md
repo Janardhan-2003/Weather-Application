@@ -1,6 +1,3 @@
-Here’s your README rewritten into a **polished `.md` file** with **icons for each technology**:
-
-````markdown
 # 🌦️ Modern Weather App (MERN + Firebase)
 
 A **modern weather application** built with the **MERN stack** + **Firebase Authentication**, featuring **real-time weather**, **7-day forecast**, and a sleek, responsive UI with dark/light mode.  
@@ -22,6 +19,30 @@ This project is designed to showcase **full-stack development skills** with clea
 </p>  
 
 ---
+
+## 🚀 Live Demo  
+
+🔗 **Live Link:** [Live](https://weatherify-two.vercel.app/)  
+
+---
+
+## ✨ Features  
+
+- 🌍 **Auto-detect location** + Search by city  
+- ⭐ **Add/remove favorites** (stored in MongoDB per user)  
+- 📊 **5-day forecast** with temperature, humidity, and wind trend  
+- 🌅 **Sunrise & Sunset timeline**  
+- ⚡ **Weather alerts** (if available from API)  
+- 📱 **Mobile-first responsive design**  
+
+---
+
+## ⚙️ Setup & Installation  
+
+### 1. Clone Repository  
+```bash
+git clone https://github.com/janardhan-2003/weather-app.git
+cd weather-app
 
 ## 🚀 Live Demo  
 
