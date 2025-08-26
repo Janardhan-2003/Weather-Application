@@ -14,7 +14,10 @@ const port = process.env.PORT || 5000;
 
 const app = express();
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: ["http://localhost:5173", "https://your-frontend.vercel.app"], // add frontend URLs
+  methods: ["GET", "POST", "DELETE"]
+}));
 
 DBConnection();
 
