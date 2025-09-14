@@ -362,12 +362,6 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 <div align="center">
 
-### 🌟 **Star this repository if you found it helpful!**
-
-[![GitHub stars](https://img.shields.io/github/stars/janardhan-2003/weather-app?style=social)](https://github.com/janardhan-2003/weather-app)
-[![GitHub forks](https://img.shields.io/github/forks/janardhan-2003/weather-app?style=social)](https://github.com/janardhan-2003/weather-app)
-[![GitHub watchers](https://img.shields.io/github/watchers/janardhan-2003/weather-app?style=social)](https://github.com/janardhan-2003/weather-app)
-
 **Made with ❤️ and modern web technologies**
 
 </div>
