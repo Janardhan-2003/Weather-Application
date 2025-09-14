@@ -1,42 +1,162 @@
-Here’s your README rewritten into a **polished `.md` file** with **icons for each technology**:
+<div align="center">
 
-````markdown
-# 🌦️ Modern Weather App (MERN + Firebase)
+# 🌦️ Weatherify - Modern Weather Application
 
-A **modern weather application** built with the **MERN stack** + **Firebase Authentication**, featuring **real-time weather**, **7-day forecast**, and a sleek, responsive UI with dark/light mode.  
+[![React](https://img.shields.io/badge/React-19.1.1-61DAFB?style=for-the-badge&logo=react&logoColor=white)](https://reactjs.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white)](https://mongodb.com/)
+[![Firebase](https://img.shields.io/badge/Firebase-Auth-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-4.1.12-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
-This project is designed to showcase **full-stack development skills** with clean architecture, API integration, database usage, and modern frontend design.  
+**A sophisticated weather application built with modern technologies, featuring real-time weather data, personalized favorites, and stunning UI/UX.**
 
----
-
-## 🛠️ Tech Stack  
-
-<p align="center">
-  <img src="https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white" />
-  <img src="https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white" />
-  <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" />
-  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" />
-  <img src="https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" />
-  <img src="https://img.shields.io/badge/Render-46E3B7?style=for-the-badge&logo=render&logoColor=white" />
-</p>  
+[🌐 Live Demo](https://weatherify-two.vercel.app/) • [📖 Documentation](#-features) • [🚀 Quick Start](#-quick-start)
 
 ---
 
-## 🚀 Live Demo  
+</div>
 
-🔗 **Live Link:** [Live](https://weatherify-two.vercel.app/)  
+## 📸 Project Preview
+
+<table>
+<tr>
+<td width="50%">
+
+### 🏠 Home Dashboard
+- **Real-time weather data**
+- **Interactive weather cards**
+- **Location-based forecasts**
+- **Beautiful animations with Framer Motion**
+
+</td>
+<td width="50%">
+
+### ⭐ Favorites Management
+- **Personalized city lists**
+- **Quick weather access**
+- **MongoDB persistence**
+- **User-specific data storage**
+
+</td>
+</tr>
+<tr>
+<td width="50%">
+
+### 📊 Advanced Forecast
+- **5-day detailed forecast**
+- **Temperature trends**
+- **Humidity & wind data**
+- **Interactive charts with Recharts**
+
+</td>
+<td width="50%">
+
+### 🔐 Secure Authentication
+- **Firebase Authentication**
+- **Protected routes**
+- **User session management**
+- **Responsive login system**
+
+</td>
+</tr>
+</table>
 
 ---
 
-## ✨ Features  
+## ✨ Key Features
 
-- 🌍 **Auto-detect location** + Search by city  
-- ⭐ **Add/remove favorites** (stored in MongoDB per user)  
-- 📊 **5-day forecast** with temperature, humidity, and wind trend  
-- 🌅 **Sunrise & Sunset timeline**  
-- ⚡ **Weather alerts** (if available from API)  
-- 📱 **Mobile-first responsive design**  
+### 🌍 **Smart Location Services**
+- **Auto-detection** of user's current location
+- **Manual city search** with autocomplete
+- **Global coverage** with accurate weather data
+- **Geolocation API integration**
+
+### ⭐ **Personalized Experience**
+- **Favorites system** with MongoDB storage
+- **User-specific preferences**
+- **Quick access to favorite locations**
+- **Persistent data across sessions**
+
+### 📊 **Comprehensive Weather Data**
+- **Real-time current conditions**
+- **5-day detailed forecast**
+- **Temperature, humidity, wind speed**
+- **Weather alerts and notifications**
+- **Sunrise/sunset information**
+
+### 🎨 **Modern UI/UX**
+- **Responsive design** for all devices
+- **Smooth animations** with Framer Motion
+- **Interactive charts** with Recharts
+- **Beautiful icons** from Lucide React
+- **Professional color scheme**
+
+### 🔒 **Security & Performance**
+- **Firebase Authentication**
+- **Protected routes and components**
+- **Environment variable management**
+- **Optimized API calls**
+- **Error handling and validation**
+
+---
+
+## 🛠️ Technology Stack
+
+### **Frontend Technologies**
+<table>
+<tr>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" />
+<br/><b>React 19.1.1</b>
+</td>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="40" height="40" />
+<br/><b>TailwindCSS 4.1.12</b>
+</td>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vitejs/vitejs-original.svg" width="40" height="40" />
+<br/><b>Vite</b>
+</td>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/firebase/firebase-plain.svg" width="40" height="40" />
+<br/><b>Firebase</b>
+</td>
+<td align="center" width="20%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/axios/axios-original.svg" width="40" height="40" />
+<br/><b>Axios</b>
+</td>
+</tr>
+</table>
+
+### **Backend Technologies**
+<table>
+<tr>
+<td align="center" width="25%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" width="40" height="40" />
+<br/><b>Node.js</b>
+</td>
+<td align="center" width="25%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/express/express-original.svg" width="40" height="40" />
+<br/><b>Express.js</b>
+</td>
+<td align="center" width="25%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg" width="40" height="40" />
+<br/><b>MongoDB</b>
+</td>
+<td align="center" width="25%">
+<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongoose/mongoose-original.svg" width="40" height="40" />
+<br/><b>Mongoose</b>
+</td>
+</tr>
+</table>
+
+### **Additional Libraries**
+- **Framer Motion** - Smooth animations and transitions
+- **Recharts** - Interactive data visualization
+- **Lucide React** - Beautiful icon library
+- **React Icons** - Comprehensive icon collection
+- **React Router DOM** - Client-side routing
+- **JS Cookie** - Cookie management
 
 ---
 
